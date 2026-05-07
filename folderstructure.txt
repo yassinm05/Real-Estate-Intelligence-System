@@ -1,33 +1,15 @@
 real_estate_rag_ecosystem/
-│
-├── data/                       
-│   ├── raw/                    
-│   └── preprocessed_real_estate.csv 
-│
-├── models/                     
-│   ├── xgboost_price_model.json
-│   └── my_real_estate_distilbert/ 
-│       ├── config.json
-│       ├── model.safetensors
-│       ├── tokenizer.json
-│       └── ...
-│
-├── notebooks/                  
-│   ├── 00_ml_xgboost_training.ipynb
-│   ├── 00_dl_distilbert_training.ipynb (Your Kaggle notebook code)
-│   └── 01_data_ingestion.ipynb 
-│
-├── chroma_db/                 
-│   └── [sqlite3 and vector files will auto-generate here]
-│
-├── app/                        
-│   ├── main.py                      
-│   ├── retriever.py           
-│              
-│
-├── frontend.py
-│
-├── .env                       
-├── .gitignore                  
-├── requirements.txt            
-└── README.md                   
+├── data/                 # Raw and preprocessed CSV datasets
+├── models/               
+│   ├── my_real_estate_distilbert/  # Fine-tuned safetensors and configs
+│   ├── xgboost_price_model.json    # Trained ML price predictor
+│   ├── scaler.pkl                  # Joblib serialized feature scaler
+│   └── encoder.pkl                 # Joblib serialized categorical encoder
+├── notebooks/            # Jupyter notebooks for EDA, ML/DL Training, and Ingestion
+├── chroma_db/            # Local vector database storage
+├── app/                  
+│   ├── main.py           # FastAPI server and endpoints
+│   └── rag_engine.py     # Core RAG logic, LangChain, and ChromaDB connection
+├── frontend.py           # Streamlit chat interface
+├── requirements.txt      # Python dependencies
+└── .env                  # Environment variables (Google API Key)
