@@ -21,10 +21,11 @@ real_estate_rag_ecosystem/
 │   └── [sqlite3 and vector files will auto-generate here]
 │
 ├── app/                        
-│   ├── main.py                 # FastAPI application instance & routing
-│   ├── predictor.py            # Logic to load XGBoost and make price predictions
-│   ├── retriever.py            # Logic to query ChromaDB using DistilBERT embeddings
-│   └── generator.py            # Langchain logic to prompt Google Gemini
+│   ├── main.py                      
+│   ├── retriever.py           
+│              
+│
+├── frontend.py
 │
 ├── .env                       
 ├── .gitignore                  
