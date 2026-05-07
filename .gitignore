@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+chroma_db/
+data/*
+models/*
+!data/.gitkeep
+!models/.gitkeep
+dataingestionpipeline.txt
+folderstructure.txt

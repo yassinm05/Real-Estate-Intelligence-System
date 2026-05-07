@@ -1,0 +1,32 @@
+real_estate_rag_ecosystem/
+│
+├── data/                       
+│   ├── raw/                    
+│   └── preprocessed_real_estate.csv 
+│
+├── models/                     
+│   ├── xgboost_price_model.json
+│   └── my_real_estate_distilbert/ 
+│       ├── config.json
+│       ├── model.safetensors
+│       ├── tokenizer.json
+│       └── ...
+│
+├── notebooks/                  
+│   ├── 00_ml_xgboost_training.ipynb
+│   ├── 00_dl_distilbert_training.ipynb (Your Kaggle notebook code)
+│   └── 01_data_ingestion.ipynb 
+│
+├── chroma_db/                 
+│   └── [sqlite3 and vector files will auto-generate here]
+│
+├── app/                        
+│   ├── main.py                 # FastAPI application instance & routing
+│   ├── predictor.py            # Logic to load XGBoost and make price predictions
+│   ├── retriever.py            # Logic to query ChromaDB using DistilBERT embeddings
+│   └── generator.py            # Langchain logic to prompt Google Gemini
+│
+├── .env                       
+├── .gitignore                  
+├── requirements.txt            
+└── README.md                   
