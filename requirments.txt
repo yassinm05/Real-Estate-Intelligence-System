@@ -1,0 +1,26 @@
+fastapi
+uvicorn
+python-dotenv
+
+# Frontend
+streamlit
+
+# AI Orchestration & LLM
+langchain
+langchain-google-genai
+google-generativeai
+
+# Vector Database
+chromadb
+
+# Deep Learning & Embeddings (DistilBERT)
+torch
+transformers
+safetensors
+
+# Machine Learning & Data Science (XGBoost Predictor)
+xgboost
+scikit-learn
+pandas
+joblib
+numpy
