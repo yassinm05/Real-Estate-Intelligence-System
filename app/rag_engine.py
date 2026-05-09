@@ -65,7 +65,7 @@ class RealEstateRAG:
         )
 
         
-        self.llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.3)
+        self.llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.3, max_retries=3)
 
         # 4. Define Prompt Template
         template = """

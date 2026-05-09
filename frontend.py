@@ -64,7 +64,7 @@ if prompt := st.chat_input("E.g., Find me a romantic 1-bedroom in Queen Anne und
                 response = requests.post(
                     API_URL, 
                     json={"query": prompt, "n_results": 5},
-                    timeout=30 # Prevent hanging if the backend is slow
+                    timeout=120 
                 )
                 
                 if response.status_code == 200:
